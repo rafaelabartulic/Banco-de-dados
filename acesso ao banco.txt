@@ -1,0 +1,35 @@
+Abrir o xampp
+
+1) Windows em Pesquisar digite. xampp
+2) no painel do xampp (Ativar Mysql)
+3) Acessar modo cmd
+4) cd c:\xampp\mysql\bin
+5) mysql -u root
+
+Comandos SLQ
+Exibe Bancos
+show databases;
+
+Acessa-editar Banco 
+use nome_banco;
+
+Exibe Tabelas;
+show tables:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

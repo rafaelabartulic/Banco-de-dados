@@ -1,0 +1,85 @@
+CREATE TABLE aluno (id INT AUTO_INCREMENT PRIMARY KEY, nome VARCHAR(30),bairro VARCHAR(20), idade INT, curso varchar(20), dt_cadastro DATE);
+
+DESC ALUNO;
+
+SELECT * FROM aluno;
+
+-- Digitar 6 Registros
+
+INSERT INTO aluno (nome, bairro, idade,curso, dt_cadastro) VALUES ("Pedro", "Mooca", 17,"inglês","2025/02/17");
+INSERT INTO aluno (nome, bairro, idade,curso, dt_cadastro) VALUES ("Maria", "Penha", 22,"DS","2018/11/23");
+
+
+SELECT * FROM aluno;
+SELECT nome, bairro FROM aluno;
+
+SELECT nome AS aluno, bairro AS "bairro do Aluno" FROM aluno;
+
+SELECT * FROM aluno ORDER BY Nome;
+SELECT * FROM aluno ORDER BY Nome DESC;
+
+SELECT * FROM aluno WHERE nome = "MAria";
+
+--- digite mais 10 registros
+
+SELECT * FROM aluno WHERE LOWER(nome) = "Maria";
+
+select * from aluno WHERE id =1;
+
+select * from aluno WHERE id = 1 AND bairro = "Centro";
+
+select * from aluno WHERE bairro != "Belém";
+
+
+-- Crie uma tabela de professor, com as seguintes coluna:
+nome string de 20, curso string 15, celular string 14, turno string 12 
+
+
+
+Função IN()
+select * from aluno WHERE bairro IN("Centro","Belém");
+select * from aluno WHERE bairro = "Centro" OR bairro = "Belém";
+
+
+BETWEEN
+select * from aluno WHERE DT_CADASTRO BETWEEN "2021/02/10" AND "2025/08/20";
+
+SELECT nome, bairro FROM aluno WHERE DT_CADASTRO BETWEEN "2021/02/10" AND "2025/10/30";
+
+Uso do %
+
+SELECT * FROM ALUNO WHERE nome LIKE "Ma%";
+
+
+SELECT * FROM ALUNO WHERE nome LIKE "%ria%";
+
+
+SELECT * FROM ALUNO WHERE nome LIKE "%a";
+
+
+
+
+--Alterndo dados
+
+UPDATE aluno SET bairro="CENTRO" WHERE ID = 1;
+
+UPDATE aluno set BAIRRO = "Tatuapé" WHERE ID=3;
+
+UPDATE aluno set BAIRRO = "Belém", nome = "Silvia" WHERE ID = 3; 
+
+
+Deletando registro
+delete from aluno where id = 2;
+
+----------------------
+
+Alterando estrutura da Tabela
+-- Incluindo coluna
+Alter table
+alter table aluno add coluna2 VARCHAR(2);
+
+
+-- Apagar coluna
+ALTER TABLE aluno DROP COLUMN coluna2;
+
+
